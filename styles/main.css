@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Monserrat";
-    src: url('https://fonts.google.com/specimen/Montserrat');
+    font-family: "Montserrat";
+    src: url('../fonts/Montserrat-Bold.ttf');
 }
 
 * {
@@ -9,13 +9,15 @@
 }
 
 body {
-    font-size: 15px;
-    background-image: url("../images/bg-top.svg");
+    background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
+    background-position: top right, left bottom;
+    background-repeat: no-repeat;
     position: relative;
     max-width: 1440px;
     height: 100vh;
     box-sizing: border-box;
-    font-family: "Monserrat", sans-serif;
+    font-size: 10px;
+    font-family: "Montserrat";
     font-weight: 700;
 }
 
@@ -81,6 +83,11 @@ body {
 
 .price {
     margin: 20px auto;
+    font-weight: 900;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card ul {
