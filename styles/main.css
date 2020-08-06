@@ -19,6 +19,17 @@ body {
     font-size: 15px;
     font-family: "Montserrat";
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1 {
+    color: hsl(233, 13%, 49%);
 }
 
 .annually-month {
@@ -35,7 +46,7 @@ body {
 }
 
 .bt-switch {
-    background: hsl(237, 63%, 64%);
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     width: 50px;
     height: 25px;
     border: none;
@@ -66,15 +77,6 @@ body {
     background: hsl(236, 72%, 79%);
 }
 
-.main {
-    margin: 10px auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
 .pricing-cards {
     margin: 20px;
     display: flex;
@@ -86,7 +88,7 @@ body {
     width: 250px;
     padding: 20px;
     background: hsl(240, 78%, 98%);
-    color: hsl(232, 13%, 33%);
+    color: hsl(233, 13%, 49%);
     border-radius: 10px;
 }
 
@@ -98,6 +100,7 @@ body {
     margin: 20px auto;
     font-weight: 900;
     font-size: 25px;
+    color: hsl(232, 13%, 33%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,6 +120,33 @@ body {
     border-bottom: 1px solid hsl(234, 14%, 74%);
 }
 
+.card span {
+    font-size: 40px;
+}
+
+.card a,
+.card a:hover,
+.card a:visited {
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    width: 180px;
+    height: 15px;
+    padding: 15px;
+    margin: 0px auto;
+    border: 1px solid;
+    border-radius: 5px;
+    color: hsl(240, 78%, 98%);
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.card a:active {
+    background: hsl(240, 78%, 98%);
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
 div.left {
     border-radius: 10px 0 0 10px;
 }
@@ -126,10 +156,13 @@ div.right {
 }
 
 div.principal {
-    /* transform: scaleY(1.1); */
     width: 240px;
     padding: 40px 20px;
-    background: hsl(237, 63%, 64%);
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);
+}
+
+div.principal .price {
     color: hsl(240, 78%, 98%);
 }
 
@@ -146,38 +179,34 @@ div.principal a,
 div.principal a:hover,
 div.principal a:visited {
     background: hsl(240, 78%, 98%);
-    border: 1px solid hsl(240, 78%, 98%);
     color: hsl(237, 63%, 64%);
+    border: 1px solid transparent;
 }
 
 div.principal a:active {
-    background: hsl(237, 63%, 64%);
+    background: transparent;
+    border: 1px solid hsl(240, 78%, 98%);
     color: hsl(240, 78%, 98%);
 }
 
-.card span {
-    font-size: 40px;
-}
-
-.card a,
-.card a:hover,
-.card a:visited {
-    display: block;
-    text-decoration: none;
-    font-size: 12px;
-    width: 180px;
-    height: 15px;
-    padding: 15px;
-    margin: 0px auto;
-    border: 1px solid hsl(237, 63%, 64%);
-    border-radius: 5px;
-    color: hsl(240, 78%, 98%);
-    letter-spacing: 1px;
-    background: hsl(237, 63%, 64%);
-    transition: .1s ease all;
-}
-
-.card a:active {
-    background: floralwhite;
-    color: hsl(237, 63%, 64%);
+@media screen and (max-width:880px) {
+    body {
+        background-image: url("../images/bg-top.svg");
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+    .pricing-cards {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    div.principal {
+        padding: 20px;
+        width: 250px;
+    }
+    .card,
+    div.left,
+    div.right {
+        border-radius: 10px;
+        margin: 15px;
+    }
 }
