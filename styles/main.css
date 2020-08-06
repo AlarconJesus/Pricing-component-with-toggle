@@ -12,13 +12,26 @@ body {
     background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
     background-position: top right, left bottom;
     background-repeat: no-repeat;
-    position: relative;
     max-width: 1440px;
+    position: relative;
     height: 100vh;
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 15px;
     font-family: "Montserrat";
     font-weight: 700;
+}
+
+.annually-month {
+    margin: 35px auto 60px auto;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(234, 14%, 74%);
+}
+
+.annually-month span {
+    margin: 30px;
 }
 
 .bt-switch {
@@ -54,7 +67,7 @@ body {
 }
 
 .main {
-    /* margin: 0 auto; */
+    margin: 10px auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,9 +117,18 @@ body {
     border-bottom: 1px solid hsl(234, 14%, 74%);
 }
 
+div.left {
+    border-radius: 10px 0 0 10px;
+}
+
+div.right {
+    border-radius: 0 10px 10px 0;
+}
+
 div.principal {
-    transform: scale(1.05);
-    padding: 20px;
+    /* transform: scaleY(1.1); */
+    width: 240px;
+    padding: 40px 20px;
     background: hsl(237, 63%, 64%);
     color: hsl(240, 78%, 98%);
 }
