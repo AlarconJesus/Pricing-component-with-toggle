@@ -20,11 +20,11 @@ body {
     font-family: "Montserrat";
     font-weight: 700;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .main {
-    margin: 40px auto;
+    margin: 40px auto 40px auto;
     text-align: center;
 }
 
